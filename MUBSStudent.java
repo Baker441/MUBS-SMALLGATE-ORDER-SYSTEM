@@ -17,12 +17,12 @@ public class MUBSStudent {
 		        int enteredPin;
 		        int loginAttempts = 0;
 		        boolean isAuthenticated = false;
-		        boolean promoDiscountActive = false; // BUG FIX #2: promo now actually tracked
+		        boolean promoDiscountActive = false;
 
 		        System.out.println("MUBS SMALLGATE ORDER SYSTEM");
 
 		        // WHILE LOOP
-		        // Authenticates user PIN with a 3-attempt limit.
+		        
 		        while (loginAttempts < 3 && !isAuthenticated) {
 		            System.out.print("Enter 4-Digit Student PIN: ");
 		            enteredPin = readValidInt(scanner, "Invalid PIN format! Enter numbers only: ");
@@ -68,7 +68,7 @@ public class MUBSStudent {
 		                    System.out.print("How many distinct items do you want to order? ");
 		                    int orderCount = readValidInt(scanner, "Please enter a whole number: ");
 
-		                    // BUG FIX #4: guard against zero/negative order counts
+		                    
 		                    if (orderCount <= 0) {
 		                        System.out.println("No items selected. Returning to main menu.");
 		                        break;
